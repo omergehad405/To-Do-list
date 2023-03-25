@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background-image: linear-gradient(135deg, #153677 , #4e085f);
+    background-repeat: no-repeat;
+    min-height: 76vh;
+}
+
+.card {
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 150px auto;
+    min-height: 30vh;
+}
+
+.card .container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.card .title h1 {
+    font-size: 18px;
+    color: #153677;
+    margin: 20px 0;
+}
+.card .title img {
+    width: 25px;
+    margin: 20px 0;
+}
+
+form{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#task{
+    border: none;
+    background-color: #Eee;
+    padding: 20px;
+    width: 280px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+#task:focus{
+    outline: none;
+}
+
+#add{
+    border: none;
+    background-color: orangered;
+    color: white;
+    padding: 20px;
+    flex: 1;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+}
+
+ul li {
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li span{
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    color: #555;
+}
+ul li span:hover{
+    color: red;
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
